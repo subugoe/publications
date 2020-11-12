@@ -23,6 +23,7 @@
     "ext-json": "*",
     "ext-libxml": "*",
     "ext-pdo": "*",
+    "pagerfanta/pagerfanta": "^2.5",
     "typo3/cms-core": ">=8.7.0 <10.9.99",
     "renanbr/bibtex-parser": "^2"
   },
