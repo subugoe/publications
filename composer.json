@@ -12,8 +12,22 @@
   "homepage": "https://github.com/in2code-de/publications",
   "authors": [
     {
+      "name": "Klaus Fumy",
+      "email": "klaus.fumy@uni-ulm.de",
+      "role": "Product owner",
+      "homepage": "https://www.uni-ulm.de"
+    },
+    {
       "name": "Alex Kellner",
-      "email": "alexander.kellner@in2code.de"
+      "email": "alexander.kellner@in2code.de",
+      "role": "Technical owner",
+      "homepage": "https://www.uni-ulm.de"
+    },
+    {
+      "name": "Sebastian Stein",
+      "email": "sebastian.stein@in2code.de",
+      "role": "Developer",
+      "homepage": "https://www.uni-ulm.de"
     }
   ],
   "type": "typo3-cms-extension",
@@ -23,14 +37,14 @@
     "ext-json": "*",
     "ext-libxml": "*",
     "ext-pdo": "*",
-    "typo3/cms-core": ">=8.7.0 <10.9.99",
+    "typo3/cms-core": ">=9.5.0 <10.9.99",
     "renanbr/bibtex-parser": "^2"
   },
   "replace": {
     "typo3-ter/publications": "self.version"
   },
   "require-dev": {
-    "typo3/cms-core": ">=8.7.0 <=10.9.99",
+    "typo3/cms-core": ">=9.5.0 <=10.9.99",
     "nimut/testing-framework": "^4.0",
     "mikey179/vfsstream": "^1.6",
     "phpunit/phpunit": "^6.0",
@@ -62,7 +76,8 @@
   "extra": {
     "typo3/cms": {
       "cms-package-dir": "{$vendor-dir}/typo3/cms",
-      "web-dir": ".Build/Web"
+      "web-dir": ".Build/Web",
+      "extension-key": "publications"
     }
   }
 }

@@ -18,7 +18,8 @@ $tca = [
         'transOrigDiffSourceField' => 'l10n_diffsource',
         'default_sortby' => 'ORDER BY last_name ASC',
         'delete' => 'deleted',
-        'iconfile' => 'EXT:publications/Resources/Public/Icons/' . Author::TABLE_NAME . '.svg'
+        'iconfile' => 'EXT:publications/Resources/Public/Icons/' . Author::TABLE_NAME . '.svg',
+        'searchFields' => 'last_name,first_name,url,orcid'
     ],
     'interface' => [
         'showRecordFieldList' => 'will be filled below...',
@@ -26,7 +27,7 @@ $tca = [
     'types' => [
         '1' => [
             'showitem' =>
-                '--palette--;;palette_author,url,--div--;' . $llTable . '.tab.system,--palette--;;palette_system,'
+                '--palette--;;palette_author,url,orcid,--div--;' . $llTable . '.tab.system,--palette--;;palette_system,'
         ],
     ],
     'palettes' => [
@@ -110,6 +111,16 @@ $tca = [
             'exclude' => true,
             'label' => 'LLL:EXT:publications/Resources/Private/Language/locallang_db.xlf:' . Author::TABLE_NAME
                 . '.first_name',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim',
+                'default' => ''
+            ]
+        ],
+        'orcid' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:publications/Resources/Private/Language/locallang_db.xlf:' . Author::TABLE_NAME
+                . '.orcid',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim',
